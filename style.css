@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid white; */
+    /* cursor: none; */
+}
+
+*::selection {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #949da3;
+    border-radius: 5px;
+}
+
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#main{
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.cursor-bubble{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    border-radius: 50%;
+    position: fixed;
+    opacity: 0;
+    scale: 0;
+    z-index: 99;
+    mix-blend-mode: difference;
+}
+
+
+#hero {
+    height: 100vh;
+}
+
+#hero #nav {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+#hero #nav h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.3vw;
+    font-weight: 100;
+}
+
+#hero .middle {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero .middle .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+#hero .middle h1 {
+    line-height: 0.7;
+    font-size: 8vw;
+}
+
+#hero .middle .social {
+    display: flex;
+    align-items: center;
+}
+
+#hero .middle .social .box{
+    height: 16vh;
+    width: 3vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4vw 0;
+}
+.box a{
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+.small-foot {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+.right .small1{
+    display: flex;
+    gap: 2vw;
+}
+
+.right .small1 h3{
+    font-size: 2vw;
+}
+
+.right .small2 p{
+    font-size: 1.5vw;
+}
+
+.left img,.right .small1 img{
+    animation: move 3s linear infinite;
+}
+
+#middle{
+    text-align: center;
+}
+#middle h3{
+    text-transform: uppercase;
+    font-size: 1.5vw;
+}
+#middle img{
+    animation: movable .6s linear infinite alternate; 
+}
+
+#page2{
+    height: 100vh;
+}
+@keyframes move {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes movable {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
